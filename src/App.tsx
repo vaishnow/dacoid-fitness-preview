@@ -4,6 +4,7 @@ import Intro from "./pages/Intro";
 import Personalization from "./pages/Personalization";
 import Progress from "./pages/Progress";
 import ProgressSchedule from "./pages/ProgressSchedule";
+import NavbarContainer from "./components/NavbarContainer";
 
 function App() {
   const router = createBrowserRouter([
@@ -28,11 +29,19 @@ function App() {
       children: [
         {
           index: true,
-          element: <Progress />,
+          element: (
+            <NavbarContainer>
+              <Progress />
+            </NavbarContainer>
+          ),
         },
         {
           path: "schedule",
-          element: <ProgressSchedule />,
+          element: (
+            <NavbarContainer>
+              <ProgressSchedule />
+            </NavbarContainer>
+          ),
         },
       ],
     },
