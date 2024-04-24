@@ -19,7 +19,7 @@ const Personalization = () => {
       <form className="h-5/6 flex flex-col justify-between">
         <div className="flex flex-col space-y-4">
           {goals.map((goal) => (
-            <GoalsCheckbox goal={goal}/>
+            <GoalsCheckbox key={goal} goal={goal}/>
           ))}
         </div>
         <button onClick={()=>navigate('/progress-tracker')} className="w-full p-5 rounded-xl text-white font-semibold bg-gradient-to-l from-[#7B91FF] to-[#95BEFF] relative -bottom-20">Confirm</button>
