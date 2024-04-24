@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import i from "../assets/i.svg";
 import styles from "./ProgressGraph.module.css";
 
 function ProgressGraph() {
+  const navigate = useNavigate();
+
   // Using Random values for graph
   const drawRandomChartValues = (length: number, isProgress: boolean) => {
     isProgress;
@@ -29,8 +32,12 @@ function ProgressGraph() {
       className={`${styles.graphBaseLine} ${styles.graphValues}`}
       style={{ height: `${Math.random() * 100}%` }}
     >
-      <div className="absolute -top-10"><span className="text-[11px]">{isProgress?'Good Job':'less then 320cal'}</span>
-      <img src={i} alt="i" className="mx-auto" /></div>
+      <div className="absolute -top-10">
+        <span className="text-[11px]">
+          {isProgress ? "Good Job" : "less then 320cal"}
+        </span>
+        <img src={i} alt="i" className="mx-auto" />
+      </div>
       <div
         className={`${styles.graphPrevValues} ${
           isProgress
@@ -50,7 +57,10 @@ function ProgressGraph() {
 
   return (
     <div className="h-32">
-      <div className="h-24 border-t border-dashed relative">
+      <div
+        onClick={() => navigate("schedule")}
+        className="h-24 border-t border-dashed relative"
+      >
         <span className="absolute mt-2 text-sm">900CAL</span>
         <hr className="absolute w-full border border-dashed border-[#29292914] top-1/3 -z-10" />
         <hr className="absolute w-full border border-dashed border-[#29292914] top-2/3 -z-10" />

@@ -3,6 +3,7 @@ import Auth from "./pages/Auth";
 import Intro from "./pages/Intro";
 import Personalization from "./pages/Personalization";
 import Progress from "./pages/Progress";
+import ProgressSchedule from "./pages/ProgressSchedule";
 
 function App() {
   const router = createBrowserRouter([
@@ -24,7 +25,16 @@ function App() {
     },
     {
       path: "/progress-tracker",
-      element: <Progress />,
+      children: [
+        {
+          index: true,
+          element: <Progress />,
+        },
+        {
+          path: "schedule",
+          element: <ProgressSchedule />,
+        },
+      ],
     },
   ]);
 
