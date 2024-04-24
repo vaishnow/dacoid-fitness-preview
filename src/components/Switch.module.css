@@ -1,0 +1,77 @@
+/* .switch {
+	height: 20px;
+	width: 40px;
+	border-radius: 14px;
+	position: relative;
+}
+
+.switch>input {
+	visibility: hidden;
+	display: inline;
+	height: 0;
+	width: 0;
+}
+
+.switch>input::before,
+.switch>input::after {
+	content: "";
+	display: block;
+	visibility: visible;
+	position: absolute;
+	inset: 2.15px auto 2.15px 2.15px;
+	border-radius: 50%;
+	width: 15.7px;
+	height: 15.7px;
+	transition: .8s ease;
+}
+
+.switch>input:checked:after {
+	transform: rotate(-90deg);
+}
+
+.switch>input:checked::before,
+.switch>input:checked::after {
+	translate: 20px;
+}
+
+.warp:checked:after {
+	animation: warp-right 1s ease-out;
+}
+
+.warp:after {
+	animation: warp-left 1s ease-out;
+}
+
+@keyframes warp-right {
+	0% {
+		transform: translateX(10px) rotate(-90deg) scaleY(1.5);
+		border-radius: 50% / 0 0 100% 100%;
+	}
+
+	1% {
+		transform: translateX(10px) rotate(-90deg) scaleY(1.5);
+		border-radius: 50% / 0 0 100% 100%;
+	}
+
+	70% {
+		border-radius: 50%;
+	}
+
+}
+
+@keyframes warp-left {
+	0% {
+		transform: translateX(-10px) rotate(90deg) scaleY(1.5);
+		border-radius: 50% / 0 0 100% 100%;
+	}
+
+	1% {
+		transform: translateX(-10px) rotate(90deg) scaleY(1.5);
+		border-radius: 50% / 0 0 100% 100%;
+	}
+
+	70% {
+		transform: rotate(90deg);
+		border-radius: 50%;
+	}
+} */
