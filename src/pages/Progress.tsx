@@ -2,6 +2,7 @@ import ProgressGraph from "../components/ProgressGraph";
 import chevronL from "../assets/chevron-left.svg";
 import WarningBanner from "../components/WarningBanner";
 import Upcoming from "../components/Upcoming";
+import WorkoutPlans from "../components/WorkoutPlans";
 
 const Progress = () => {
   return (
@@ -11,6 +12,7 @@ const Progress = () => {
       <ProgressGraph/>
       <WarningBanner/>
       <Upcoming/>
+      <WorkoutPlans/>
     </main>
   );
 };
