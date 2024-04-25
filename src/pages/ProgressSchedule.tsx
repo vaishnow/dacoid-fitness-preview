@@ -25,7 +25,7 @@ const ProgressSchedule = () => {
       </div>
       <div className="flex justify-center space-x-1 mb-10">
         {dates.map((item) => (
-          <Dates data={item} isActive={item?.active} />
+          <Dates key={item.date} data={item} isActive={item?.active} />
         ))}
       </div>
       <TimeSchedule/>

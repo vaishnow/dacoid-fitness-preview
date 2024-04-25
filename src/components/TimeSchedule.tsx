@@ -35,7 +35,7 @@ const TimeSchedule = () => {
   return (
     <div>
       {data.map((data) => (
-        <Hour data={data}/>
+        <Hour key={data.hour} data={data}/>
       ))}
     </div>
   );
